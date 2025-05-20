@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress-container {
+            position: relative;
+            width: 200px;
+            height: 20px;
+            background-color: #eee;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+          height: 100%;
+          width: 0%;
+          background-color: #4caf50;
+          transition: width 0.3s ease;
+        }
+
+        #progressText {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <span id="progressText">0%</span>
+    </div>
+
+    <!-- Кнопки для примера -->
+    <div style="margin-top: 1rem;">
+      <button onclick="setProgress(25)">25%</button>
+      <button onclick="setProgress(50)">50%</button>
+      <button onclick="setProgress(75)">75%</button>
+      <button onclick="setProgress(100)">100%</button>
+    </div>
+
+    <script>
+        function setProgress(percent) {
+            const bar = document.getElementById('progressBar');
+            const text = document.getElementById('progressText');
+
+            percent = Math.max(0, Math.min(100, percent)); // ограничение от 0 до 100
+            bar.style.width = percent + '%';
+            text.textContent = percent + '%';
+        }   
+    </script>
+
+</body>
+</html>

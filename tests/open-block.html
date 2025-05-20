@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Затемнённый фон */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            z-index: 1000;
+        }
+
+        /* Модальное окно */
+        #modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1001;
+        }
+
+        /* Можно добавить для красоты */
+        body.modal-open {
+            overflow: hidden; /* отключает прокрутку фона */
+        }
+
+    </style>
+</head>
+<body>
+    <button id="openModalBtn">Открыть окно</button>
+
+    <!-- Затемнённый фон -->
+    <div id="overlay"></div>
+
+    <!-- Модальное окно -->
+    <div id="modal">
+      <h2>Модальное окно</h2>
+      <p>Тут может быть ваш текст или форма.</p>
+      <button id="closeModalBtn">Закрыть</button>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const modal = document.getElementById('modal');
+        const overlay = document.getElementById('overlay');
+
+        openBtn.addEventListener('click', () => {
+            overlay.style.display = 'block';
+            modal.style.display = 'block';
+            document.body.classList.add('modal-open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        });
+
+    </script>
+
+</body>
+</html>

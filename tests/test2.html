@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      border: 2px solid #333;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .first {
+      background: #d1e7dd;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .others {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .others div {
+      background: #f8d7da;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="first">Я сверху</div>
+    <div class="others">
+      <div>Я внизу</div>
+      <div>Я тоже внизу</div>
+    </div>
+  </div>
+
+</body>
+</html>

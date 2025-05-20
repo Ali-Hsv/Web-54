@@ -1,0 +1,229 @@
+@font-face{
+    font-family: "Simple";
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;  
+}
+
+/*todo:========Settings========*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Simple";
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* flex-direction: column; */
+}
+
+/*todo:========Login-Section========*/
+
+.login-container {
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+    transition: 0.2s;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.register-container {
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+    transition: 0.2s;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.big-login-container{
+    width: 430px;
+    height: 430px;
+}
+
+.big-register-container{
+    width: 480px;
+    height: 480px;
+}
+
+.login-container h1 {
+    margin-bottom: 10px;
+}
+
+.login-input {
+    width: 80%;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 20px;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+.login-input:hover {
+    transform: scale(1.05);
+}
+
+.error {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    height: 16px;
+}
+
+.login-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+a{
+    color: white;
+    font-size: 0.9rem;
+}
+
+/*todo:========BG(animated cyrcle)========*/
+
+.cyrcles{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cyrcles>div{
+    border-radius: 100%;
+    position: absolute;
+    transition: opacity 0.2s inherit;
+    opacity: 1;
+}
+
+.cyrcle-1{
+    width: 260px;
+    height: 260px;
+    left: 220px;
+    top: 250px;
+    animation: bubbleFloat 6s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.cyrcle-2{
+    width: 220px;
+    height: 220px;
+    left: -70px;
+    top: -70px;
+    animation: bubbleFloat 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.cyrcle-3{
+    width: 180px;
+    height: 180px;
+    left: 330px;
+    top: -110px;
+    animation: bubbleFloat 5.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.cyrcle-4{
+    width: 140px;
+    height: 140px;
+    left: -30px;
+    top: 250px;
+    animation: bubbleFloat 5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.cyrcle-5{
+    width: 100px;
+    height: 100px;
+    left: 390px;
+    top: 120px;
+    animation: bubbleFloat 5s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.cyrcle-6{
+    width: 60px;
+    height: 60px;
+    left: 120px;
+    top: 390px;
+    animation: bubbleFloat 5.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.cyrcle-7{
+    width: 90px;
+    height: 90px;
+    left: -110px;
+    top: 150px;
+    animation: bubbleFloat 5.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.cyrcle-8{
+    width: 110px;
+    height: 110px;
+    left: 180px;
+    top: -40px;
+    animation: bubbleFloat 5.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.05);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+

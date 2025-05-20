@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Underline Link</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+
+    h3 {
+      display: inline-block;
+    }
+
+    a {
+      position: relative;
+      color: #333;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 5px 0;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: #333;
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after,
+    a.clicked::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#" id="myLink">
+    <h3>Click Me</h3>
+  </a>
+
+  <script>
+    const link = document.getElementById('myLink');
+
+    if (localStorage.getItem('linkClicked') === 'true') {
+      link.classList.add('clicked');
+    }
+
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.add('clicked');
+      localStorage.setItem('linkClicked', 'true');
+
+      location.assign("slider.html");
+    });
+  </script>
+
+</body>
+</html>

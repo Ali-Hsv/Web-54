@@ -1,0 +1,237 @@
+/*todo:========Settings========*/
+
+:root{
+    --a-darker-gray: #595959;
+    --b-dark-gray: #7F7F7F;
+    --c-gray: #A5A5A5;
+    --d-light-gray: #CCCCCC;
+    --e-white: #F2F2F2;
+    --s-darker-gray: #404040;
+    --ss-darker-gray: #343434;
+} 
+
+/* :root{
+    --a-darker-gray: #504B38;
+    --b-dark-gray: #b8b3a2;
+    --c-gray: #B9B28A;
+    --d-light-gray: #B9B28A;
+    --e-white: #F8F3D9; 
+    --s-darker-gray: #444030;
+    --ss-darker-gray: #373428;
+} */
+/** In front of thems is marked the alphabet so that when coloring there is an order of colors */
+
+body{
+    background: var(--c-gray);
+}
+/*todo:========Glass========*/
+
+.glassSection{
+    background: var(--e-white);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    color: var(--e-white);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*todo:========Header========*/
+
+header{
+    background: var(--d-light-gray);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+    /* box-shadow: rgb(17, 26, 35) 0px 20px 30px -10px; */
+}
+
+.search-input{
+    border: 1px solid var(--d-light-gray);
+}
+
+.search-input:focus {
+    border-color: var(--b-dark-gray);
+    box-shadow: 0 0 0 3px rgba(58, 58, 59, 0.204);
+}
+
+.icon{
+    background: var(--a-darker-gray);
+    color: var(--d-light-gray);
+}
+
+.icon:hover {
+    background: var(--b-dark-gray);
+}
+
+.iconColor{
+    color: var(--a-darker-gray);
+}
+
+.tooltip .tooltip-text{
+    background-color: var(--s-darker-gray);
+    color: var(--e-white);
+}
+
+.tooltip .tooltip-text::after{
+    border-color: transparent transparent var(--s-darker-gray) transparent;
+}
+/*todo:========Slider========*/
+
+.slider{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.centerBox>div{
+    color: var(--e-white);
+}
+
+/* .slideMoreButton{
+    background: var(--b-dark-gray);
+    color: var(--e-white);
+}
+
+.slideMoreButton:hover{
+    background: var(--a-darker-gray);
+    color: var(--e-white);
+} */
+
+.slide-title, .centerBox{
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    color: var(--e-white);
+}
+
+.slideMoreButton{
+    background: rgba(122, 122, 122, 0.348);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    color: var(--e-white);
+}
+
+.slideMoreButton:hover{
+    background: rgba(87, 87, 87, 0.431);
+}
+
+/*todo======MainSect.=========*/
+
+.circelBlock, .imgBlock, .personeProfile{
+    background: var(--b-dark-gray);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.more, .about{
+    background: var(--b-dark-gray);
+    color: var(--e-white);
+}
+
+.more, .about:hover{
+    background: var(--a-darker-gray);
+    color: var(--e-white);
+}
+
+.personeProfile{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.textBox{
+    color: var(--s-darker-gray);
+    background: rgba(96, 96, 96, 0.345);
+    box-shadow: rgba(34, 34, 55, 0.294) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+h2{
+    color: var(--s-darker-gray);
+}
+
+/*todo:========Footer========*/
+
+footer{
+    background: var(--a-darker-gray);
+}
+
+.footerIconColor{
+    color: var(--d-light-gray);
+}
+
+.quickInfo, .infBlock{
+    color: var(--e-white);
+}
+
+.infBlock>div{
+    border-bottom: 2px solid var(--e-white);
+}
+
+.myLink{
+    color: var(--d-light-gray);
+}
+
+.myLink::after{
+    background: var(--s-darker-gray);
+}
+
+.ulLi{
+    color: var(--e-white);
+}
+
+.footer-bottom{
+    background: var(--s-darker-gray);
+    color: var(--d-light-gray);
+    border-top: 1px solid var(--ss-darker-gray);
+}
+
+/*! -----------------------------------------------------------LOGIN--------------------------------------------- */
+
+
+.login-container, .register-container{
+    background: #f2f2f25b;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.login-container h1{
+    color: var(--s-darker-gray);
+}
+
+.login-input{
+    border: 1px solid var(--c-gray);
+}
+
+.error{
+    color: #e70707;
+}
+
+.login-button{
+    background: var(--s-darker-gray);
+    color: var(--e-white);
+}
+
+.login-button:hover {
+    background: var(--a-darker-gray);
+}
+
+.cyrcles>div{
+    background: var(--e-white);
+    box-shadow: -41px -41px 57px -32px rgba(0, 0, 0, 0.3) inset;
+}
+
+/*!----------------------------------Class--------------------------*/
+
+.student{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: var(--d-light-gray);
+    color: var(--a-darker-gray);
+}
+
+.mainText{
+    color: var(--s-darker-gray);
+}
+
+/*!===============================*/
+
+.NewsImage{
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.mainTextBlock{
+    color: var(--ss-darker-gray);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

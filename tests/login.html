@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      background: white;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      gap: 5px;
+      transition: 0.2s;
+    }
+
+    .big-login-container{
+        width: 400px;
+        height: 400px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 80%;
+      padding: 15px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+      transition: transform 0.2s;
+    }
+
+    input:hover {
+      transform: scale(1.05);
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 2px;
+      margin-bottom: 5px;
+      height: 16px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <div id="usernameError" class="error"></div>
+
+    <input type="password" id="password" placeholder="Password">
+    <div id="passwordError" class="error"></div>
+
+    <button onclick="validateForm()">Login</button>
+  </div>
+
+  <script>
+    function validateForm() {
+      const loginContainer = document.querySelector(".login-container")
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const usernameError = document.getElementById("usernameError");
+      const passwordError = document.getElementById("passwordError");
+
+      let valid = true;
+
+      // Проверка имени на спецсимволы
+      const forbiddenChars = /[#\$%@!?,'"<>^{}\[\]№~`]/;
+      if (forbiddenChars.test(username)) {
+        usernameError.textContent = "The name must not contain any special characters.";
+        valid = false;
+      } else if (username.trim() === "") {
+        usernameError.textContent = "The name field cannot be empty.";
+        valid = false;
+      } else {
+        usernameError.textContent = "";
+      }
+
+      // Проверка длины пароля
+      if (password.length < 8) {
+        passwordError.textContent = "The password must be at least 8 characters long.";
+        valid = false;
+      } else {
+        passwordError.textContent = "";
+      }
+
+      if (valid) {
+        loginContainer.classList.remove("big-login-container");
+        alert("Успешный вход!");
+        // можно перенаправить или отправить форму
+      }
+      else{
+        loginContainer.classList.add("big-login-container");
+      }
+    }
+  </script>
+
+</body>
+</html>

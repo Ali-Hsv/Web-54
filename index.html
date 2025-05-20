@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="style/colors.css"> <!-- color style -->
+    <link rel="stylesheet" href="style/style.css"> <!-- main style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- search icon link -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"> <!-- error icon link -->
+    
+</head>
+<body>
+    <div class="posAb">
+        <div class="cyrcles">
+            <div class="cyrcle-1"></div>
+            <div class="cyrcle-2"></div>
+            <div class="cyrcle-3"></div>
+            <div class="cyrcle-4"></div>
+            <div class="cyrcle-5"></div>
+            <div class="cyrcle-6"></div>
+            <div class="cyrcle-7"></div>
+            <div class="cyrcle-8"></div>
+        </div>
+    </div>
+
+    <div class="glassSection">
+        <header>
+            <div class="headerElements">
+                <div class="logo" onclick="mainmanu()">
+                    <i class="fi fi-rr-exclamation iconColor"></i>
+                </div>
+                <!-- <div class="search-con2">
+                    <input type="text" class="search-input" placeholder="Search..." />
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                </div> -->
+                <div class="iconsContainer">
+                    <span class="tooltip">
+                        <a href="login.html"><i class="fi fi-rr-user iconColor"></i></a>
+                        <span class="tooltip-text">Login</span>
+                    </span>
+                    <span class="tooltip">
+                        <a href="all-news.html"><i class="fi fi-rr-globe iconColor"></i></a>
+                        <span class="tooltip-text">News</span>
+                    </span>
+                    <span class="tooltip">
+                        <a href="class.html"><i class="fi fi-rr-menu-burger iconColor"></i></a>
+                        <span class="tooltip-text">Class</span>
+                    </span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="headSection">
+                <div class="slider">
+                    <div class="slides" id="slides">
+                        <div class="slide" id="img-1" style="background-color: #6a6a6a;">
+                            <div class="borderBox">
+                                <div id="info-name-1" class="slide-title">Loading Name ...</div>
+                                <div class="centerBox">
+                                    <div>
+                                        <p id="quick-info-1">Loading Text ...</p>
+                                    </div>
+                                    <button class="slideMoreButton" onclick="handleClick(0)">More</button>
+                                </div>
+                            </div> 
+                        </div>  
+                        <div class="slide" id="img-2" style="background-color: #6a6a6a;">
+                            <div class="borderBox">
+                                <div id="info-name-2" class="slide-title">Loading Name ...</div>
+                                <div class="centerBox">
+                                    <div>
+                                        <p id="quick-info-2">Loading Text ...</p>
+                                    </div>
+                                    <button class="slideMoreButton" onclick="handleClick(1)">More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" id="img-3" style="background-color: #6a6a6a;">
+                            <div class="borderBox">
+                                <div id="info-name-3" class="slide-title">Loading Name ...</div>
+                                <div class="centerBox">
+                                    <div>
+                                        <p id="quick-info-3">Loading Text ...</p>
+                                    </div>
+                                    <button class="slideMoreButton" onclick="handleClick(2)">More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" id="img-4" style="background-color: #6a6a6a;">
+                            <div class="borderBox">
+                                <div id="info-name-4" class="slide-title">Loading Name ...</div>
+                                <div class="centerBox">
+                                    <div>
+                                        <p id="quick-info-4">Loading Text ...</p>
+                                    </div>
+                                    <button class="slideMoreButton" onclick="handleClick(3)">More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" id="img-1" style="background-color: #6a6a6a;">
+                            <div class="borderBox">
+                                <div id="info-name-1" class="slide-title">Loading Name ...</div>
+                                <div class="centerBox">
+                                    <div>
+                                        <p id="quick-info-1">Loading Text ...</p>
+                                    </div>
+                                    <button class="slideMoreButton" onclick="handleClick(0)">More</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                  
+                    <button class="arrow arrow-left" onclick="prevSlide()">
+                      <i class="fi fi-rr-angle-left"></i>
+                    </button>
+                    <button class="arrow arrow-right" onclick="nextSlide()">
+                      <i class="fi fi-rr-angle-right"></i>
+                    </button>
+                  </div>
+            </section>
+            <section class="mainText">
+                <h1>WEB 54</h1>
+                <p>News and Events of WEB-54 Class</p>
+            </section>
+            <section class="innerSite">
+                <div id="doc1" class="mainSiteBlocks">
+                    <div class="imgBlock" id="img-5"></div>
+                    <div class="InfoBlock">
+                        <h2 id="info-name-5">Title</h2>
+                        <div class="textBox">
+                            <p id="quick-info-5">Loading Text...</p>
+                        </div>
+                        <button class="more" onclick="handleClick(4)">More</button>
+                    </div>
+                </div>
+                <div id="doc2" class="mainSiteBlocks">
+                    <div class="InfoBlock">
+                        <h2 id="info-name-6">Title</h2>
+                        <div class="textBox">
+                            <p id="quick-info-6">Loading Text...</p>
+                        </div>
+                        <button class="more" onclick="handleClick(5)">More</button>
+                    </div>
+                    <div class="imgBlock" id="img-6"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footerMainDiv">
+                <div class="quickInfo">
+                    <div class="logo">
+                        <i class="fi fi-rr-exclamation footerIconColor"></i>
+                    </div>
+
+                    <ul>
+                        <li><a class="ulLi" href="">Contact</a></li>
+                        <li><a class="ulLi" href="">School</a></li>
+                        <li><a class="ulLi" href="">Class</a></li>
+                        <li><a class="ulLi" href="">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="contackDiv infBlock">
+                    <div><h3>Contact</h3></div>
+                    <a href="#" class="myLink">
+                        <p>Email</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Phone</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Location</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Work Time</p>
+                    </a>
+                </div>
+
+                <div class="socialMediaDiv infBlock">
+                    <div><h3>Social Media</h3></div>
+                    <a href="#" class="myLink">
+                        <p>Instagram</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Facebook</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Youtube</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Watsap</p>
+                    </a>
+                </div>
+
+                <div class="navigationLinksDiv infBlock">
+                    <div><h3>Navigation</h3></div>
+                    <a href="login.html" class="myLink">
+                        <p>Login</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Head</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>Students</p>
+                    </a>
+                    <a href="#" class="myLink">
+                        <p>News</p>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="footer-bottom">
+        ©2025 Web.54 All rights reserved.
+    </div>
+    <script src="app/app.js"></script>
+    <script src="app/news-server.js"></script>
+    <script src="./app/load-news-but.js"></script>
+
+</body>
+</html>
