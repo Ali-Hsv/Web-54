@@ -16,7 +16,7 @@ fetch("https://682aeb9eab2b5004cb383ffe.mockapi.io/news/news")
                     <div class="textBox">
                         <p id="quick-info-${obj.id}">Loading Text...</p>
                     </div>
-                    <button class="more" onclick="handleClick(4)">More</button>
+                    <button class="more" onclick="handleClick(${obj.id})">More</button>
                 </div>
             `
             main.appendChild(div);
