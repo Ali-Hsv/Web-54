@@ -31,7 +31,7 @@ _in Development_
 
 ### After
 
-<img src="https://i.postimg.cc/V6x8Ynxb/Last-File-Structure.png"></img>
+<img src="https://i.postimg.cc/0NmYrq3X/Last-File-Structure.png"></img>
 
 ---
 
@@ -59,6 +59,6 @@ _in Development_
 
 1. Clone the project:
    ```bash
-   git clone https://github.com/Ali-Hsv/QuizArena-AZE.git
+   git clone https://github.com/Ali-Hsv/Web-54.git
    ```
 2. [Click and open in browser](https://ali-hsv.github.io/Web-54/)
