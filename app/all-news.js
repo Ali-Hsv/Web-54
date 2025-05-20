@@ -6,6 +6,8 @@ fetch("https://682aeb9eab2b5004cb383ffe.mockapi.io/news/news")
         const main = document.querySelector('.innerSite')
 
         data.forEach(obj => {
+            const minus = obj.id - 1;
+            console.log(minus);
             const div = document.createElement('div')
             div.className = "newsBlock"
             div.id = `doc${obj.id}`
@@ -16,7 +18,7 @@ fetch("https://682aeb9eab2b5004cb383ffe.mockapi.io/news/news")
                     <div class="textBox">
                         <p id="quick-info-${obj.id}">Loading Text...</p>
                     </div>
-                    <button class="more" onclick="handleClick(${obj.id})">More</button>
+                    <button class="more" onclick="handleClick(${minus})">More</button>
                 </div>
             `
             main.appendChild(div);
